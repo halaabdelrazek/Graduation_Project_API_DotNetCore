@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.ModelsDB
 {
+    public enum OrderStatus
+    {
+
+        Pending = 1,
+        Shipped,
+        Delivered,
+        Canceled,
+
+    }
     public abstract class  Product
     {
         public Product()

@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.ModelsDB
 {
-    public enum OrderStatus
+    public class Accessories:Product
     {
-        
-        Pending=1,
-        Shipped,
-        Delivered,
-        Canceled,
-
+        public Guid SubCategoryID { get; set; }
+        public virtual SubCategory SubCategory { get; set; }
     }
 }
