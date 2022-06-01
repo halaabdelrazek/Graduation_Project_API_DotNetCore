@@ -10,12 +10,17 @@ namespace DataAccessLayer.Data.ModelsDB
     {
         public Category()
         {
-            Products = new HashSet<Product>();
+            //Products = new HashSet<Product>();
+            SubCategories = new HashSet<SubCategory>();
+
+
         }
         public Guid Id { get; set; }
 
         public string? CategoryName{ get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        //public ICollection<Product> Products { get; set; }
+        public virtual ICollection<SubCategory> SubCategories { get; set; }
+
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.ModelsDB
 {
-    public class Product
+    public abstract class  Product
     {
         public Product()
         {
@@ -16,7 +16,7 @@ namespace DataAccessLayer.Data.ModelsDB
         }
         public Guid Id { get; set; }    
 
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         public decimal Price { get; set; }
 
@@ -33,21 +33,17 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public double Weight { get; set; }
 
-        public double Size { get; set; }
-
         public string? Description { get; set; }
 
         public string? Brand { get; set; }
 
         public ICollection<ProductImage> ProductImages { get; set; }
 
-        public Guid CarrierId { get; set; }
+        
 
-        public Carrier Carrier { get; set; }
+        //public Guid CategoryId { get; set; }
 
-        public Guid CategoryId { get; set; }
-
-        public Category Category { get; set; }
+        //public Category Category { get; set; }
 
 
 

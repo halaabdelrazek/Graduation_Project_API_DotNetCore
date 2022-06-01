@@ -10,7 +10,7 @@ namespace DataAccessLayer.Data.ModelsDB
     {
         public Carrier()
         {
-            Products = new HashSet<Product>();
+            Orders = new HashSet<Order>();
         }
         public Guid Id { get; set; }
 
@@ -18,6 +18,6 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public string? Carrier_Phone { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }
