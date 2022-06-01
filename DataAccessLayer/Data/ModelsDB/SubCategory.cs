@@ -14,7 +14,9 @@ namespace DataAccessLayer.Data.ModelsDB
             PCGamings = new HashSet<PCGaming>();
             Monitors = new HashSet<Monitor>();
             Accessories = new HashSet<Accessories>();
-
+            CardioEquipments = new HashSet<CardioEquipment>();
+            SportsSupplements = new HashSet<SportsSupplements>();
+            ShoesSports = new HashSet<ShoesSport>();
 
         }
         public Guid ID { get; set; }
@@ -29,6 +31,14 @@ namespace DataAccessLayer.Data.ModelsDB
         public virtual ICollection<PCGaming> PCGamings { get; set; }
         public virtual ICollection<Monitor> Monitors { get; set; }
         public virtual ICollection<Accessories> Accessories { get; set; }
+
+        public virtual ICollection<CardioEquipment> CardioEquipments { get; set; }
+        public virtual ICollection<SportsSupplements> SportsSupplements { get; set; }
+
+        public virtual ICollection<ShoesSport> ShoesSports { get; set; }
+
+
+
 
 
 
