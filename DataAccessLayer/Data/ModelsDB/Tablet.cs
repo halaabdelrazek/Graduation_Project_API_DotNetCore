@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.ModelsDB
 {
-    public class Tablet
+    public class Tablet :Product
     {
         public string? OpreatingSystem { get; set; }
         public string? MemoryRAM { get; set; }
