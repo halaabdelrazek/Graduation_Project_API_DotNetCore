@@ -14,10 +14,17 @@ namespace DataAccessLayer.Data.ModelsDB
             PCGamings = new HashSet<PCGaming>();
             Monitors = new HashSet<Monitor>();
             Accessories = new HashSet<Accessories>();
+            CardioEquipments = new HashSet<CardioEquipment>();
+            SportsSupplements = new HashSet<SportsSupplements>();
+            ShoesSports = new HashSet<ShoesSport>();
+
             Perfume = new HashSet<Perfume>();
             MakeUp = new HashSet<MakeUp>();
+            MobilePhones = new HashSet<MobilePhone>();
+            Tablets = new HashSet<Tablet>();
 
         }
+     
         public Guid ID { get; set; }
         public string? Name { get; set; }
 
@@ -33,9 +40,12 @@ namespace DataAccessLayer.Data.ModelsDB
         public virtual ICollection<MakeUp> MakeUp { get; set; }
         public virtual ICollection<Perfume> Perfume { get; set; }
 
+        public virtual ICollection<CardioEquipment> CardioEquipments { get; set; }
+        public virtual ICollection<SportsSupplements> SportsSupplements { get; set; }
 
+        public virtual ICollection<ShoesSport> ShoesSports { get; set; }
 
-
-
+        public virtual ICollection<MobilePhone> MobilePhones { get; set; }
+        public virtual ICollection<Tablet> Tablets { get; set; }
     }
 }
