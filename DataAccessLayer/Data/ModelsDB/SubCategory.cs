@@ -18,12 +18,11 @@ namespace DataAccessLayer.Data.ModelsDB
             SportsSupplements = new HashSet<SportsSupplements>();
             ShoesSports = new HashSet<ShoesSport>();
 
-        }
-        public SubCategory()
-        {
             MobilePhones = new HashSet<MobilePhone>();
             Tablets = new HashSet<Tablet>();
+
         }
+     
         public Guid ID { get; set; }
         public string? Name { get; set; }
 
@@ -41,13 +40,6 @@ namespace DataAccessLayer.Data.ModelsDB
         public virtual ICollection<SportsSupplements> SportsSupplements { get; set; }
 
         public virtual ICollection<ShoesSport> ShoesSports { get; set; }
-
-
-
-
-
-
-
 
         public virtual ICollection<MobilePhone> MobilePhones { get; set; }
         public virtual ICollection<Tablet> Tablets { get; set; }
