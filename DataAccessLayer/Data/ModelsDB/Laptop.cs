@@ -8,6 +8,7 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class Laptop:Product
     {
+        
         public string ScreenSize { get; set; }
 
         public string MemorySpeed { get; set; }
