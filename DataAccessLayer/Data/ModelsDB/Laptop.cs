@@ -24,11 +24,7 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public int? TotalUSBPorts { get; set; }
 
-
-
-
-
-
-
+        public int ProcessorCount { get; set; }
+        public string? CPU { get; set; }
     }
 }
