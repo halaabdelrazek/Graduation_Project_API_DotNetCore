@@ -14,5 +14,7 @@ namespace DataAccessLayer.Data.ModelsDB
         public Guid CategoryID { get; set; }
 
         public virtual Category Category { get; set; }
+
+        
     }
 }
