@@ -53,6 +53,8 @@ namespace DataAccessLayer.Data.ModelsDB
         public virtual ICollection<Tablet> Tablets { get; set; }
 
 
+        // Realtionship with contactdetails 1 to 1 
+        public virtual ContactDetail ContactDetail { get; set; }
 
     }
 }
