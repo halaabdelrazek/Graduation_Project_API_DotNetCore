@@ -12,12 +12,11 @@ namespace DataAccessLayer.Data.ModelsDB
         User()
         {
             ContactDetails = new HashSet<ContactDetail>();
-        }
-    {
-        public User()
-        {
             Reviews = new HashSet<Review>();
+
         }
+
+      
         public string? First_Name { get; set; }
         public string? Last_Name { get; set; }
         public string? Company_Name { get; set; }
