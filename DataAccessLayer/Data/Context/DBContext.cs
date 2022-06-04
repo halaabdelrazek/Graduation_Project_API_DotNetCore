@@ -11,9 +11,9 @@ using Monitor = DataAccessLayer.Data.ModelsDB.Monitor;
 
 namespace DataAccessLayer.Data.Context
 {
-    public class DBContext:IdentityDbContext<User>
+    public class MartDBContext:IdentityDbContext<User>
     {
-        public DBContext(DbContextOptions<DBContext> options) : base(options)
+        public MartDBContext(DbContextOptions<MartDBContext> options) : base(options)
         {
 
         }
