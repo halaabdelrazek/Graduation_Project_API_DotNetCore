@@ -15,6 +15,8 @@ namespace DataAccessLayer.Data.ModelsDB
         public decimal? Avarage_Rateing { get; set; }
         public string? Url { get; set; }
         public string? Description { get; set; }
+        public Guid CartId { get; set; }
+        public virtual ShoppingCart ShoppingCart { get; set; }
 
     }
 }
