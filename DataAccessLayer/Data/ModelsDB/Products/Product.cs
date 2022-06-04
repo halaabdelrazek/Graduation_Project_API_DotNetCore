@@ -21,7 +21,7 @@ namespace DataAccessLayer.Data.ModelsDB
         public Product()
         {
             ProductImages = new HashSet<ProductImage>();
-
+             WishlistProduct = new HashSet<WishlistProduct>();
         }
         public Guid Id { get; set; }    
 
@@ -46,9 +46,11 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public string? Brand { get; set; }
 
+        public virtual ICollection<WishlistProduct> WishlistProduct { get; set; }
+
         public ICollection<ProductImage> ProductImages { get; set; }
 
-        
+      
 
         //public Guid CategoryId { get; set; }
 

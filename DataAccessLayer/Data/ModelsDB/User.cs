@@ -24,11 +24,15 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? Url { get; set; }
         public string? Description { get; set; }
         public Guid CartId { get; set; }
+        public Guid WishlistID { set; get; }
+
         public virtual ShoppingCart ShoppingCart { get; set; }
 
         public virtual ICollection<ContactDetail> ContactDetails { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }
+
+        public virtual Wishlist Wishlist { get; set; }
 
 
     }
