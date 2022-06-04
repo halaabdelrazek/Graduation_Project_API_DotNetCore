@@ -8,6 +8,10 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class MobilePhone : Product
     {
+        public MobilePhone()
+        {
+            Reviews = new HashSet<Review>();
+        }
         public string? OpreatingSystem { get; set; }
         public string? MemoryRAM { get; set; }
         public string? StorageCapacity { get; set; }
@@ -18,6 +22,8 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? SIMCardSlotCount { get; set; }
         public Guid SubCategoryId { get; set; }
         public virtual SubCategory SubCategory { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
+
 
     }
 }

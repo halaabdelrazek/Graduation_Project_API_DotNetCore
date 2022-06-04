@@ -8,6 +8,10 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class SportsSupplements : Product
     {
+        public SportsSupplements()
+        {
+            Reviews = new HashSet<Review>();
+        }
         public String? Flavour { get; set; }
 
         public string? Format { get; set; }
@@ -17,5 +21,8 @@ namespace DataAccessLayer.Data.ModelsDB
         public Guid SubCategoryId { get; set; }
 
         public virtual SubCategory SubCategory { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
+
     }
 }

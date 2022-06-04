@@ -8,6 +8,10 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class PCGaming:Product
     {
+        public PCGaming()
+        {
+            Reviews = new HashSet<Review>();
+        }
         public string MemorySpeed { get; set; }
         public string CPUSpeed { get; set; }
         public string OS { get; set; }
@@ -15,5 +19,8 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public Guid SubCategoryID { get; set; }
         public virtual SubCategory SubCategory { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
+
     }
 }

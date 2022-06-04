@@ -8,6 +8,10 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class CardioEquipment : Product
     {
+        public CardioEquipment()
+        {
+            Reviews = new HashSet<Review>();
+        }
         public string? Material { get; set; }
 
         public string? Dimensions { get; set; }
@@ -15,6 +19,9 @@ namespace DataAccessLayer.Data.ModelsDB
         public Guid SubCategoryId { get; set; }
         
         public virtual SubCategory SubCategory { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
+
 
 
     }
