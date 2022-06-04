@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer.Data.ModelsDB.Products;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace DataAccessLayer.Data.ModelsDB
             MakeUp = new HashSet<MakeUp>();
             MobilePhones = new HashSet<MobilePhone>();
             Tablets = new HashSet<Tablet>();
+            ProductOrders = new HashSet<ProductOrder>();
         }
         public Guid Id { get; set; }
         public decimal ShippingPrice { get; set; }
@@ -52,6 +54,7 @@ namespace DataAccessLayer.Data.ModelsDB
         public virtual ICollection<MobilePhone> MobilePhones { get; set; }
         public virtual ICollection<Tablet> Tablets { get; set; }
 
+        public virtual ICollection<ProductOrder> ProductOrders { get; set; }
 
         // Realtionship with contactdetails 1 to 1 
         public virtual ContactDetail ContactDetail { get; set; }

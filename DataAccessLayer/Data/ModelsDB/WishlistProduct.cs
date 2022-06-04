@@ -8,8 +8,8 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class WishlistProduct
     {
-        public Guid WishlistID { get; set; }
-        public Guid ProductID { get; set; }
+        public Guid WishlistId { get; set; }
+        public Guid ProductId { get; set; }
         public Wishlist Wishlist { get; set; }  
         public Product Product { get; set; }
     }

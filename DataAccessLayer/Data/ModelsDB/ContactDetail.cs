@@ -8,7 +8,7 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class ContactDetail
     {
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public string Phone { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
@@ -16,10 +16,10 @@ namespace DataAccessLayer.Data.ModelsDB
         public string Street1 { get; set; }
         public string? Street2 { get; set; }
 
-        public virtual Guid OrderID { get; set; }
+        public virtual Guid OrderId { get; set; }
         public virtual Order Order { get; set; }
 
-        public virtual Guid UserID { get; set; }
+        public virtual Guid UserId { get; set; }
         public virtual User User { get; set; }
 
 
