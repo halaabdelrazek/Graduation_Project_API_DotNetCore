@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.Data.ModelsDB
 {
     public class User: IdentityUser
-    {
+    { 
         public string? First_Name { get; set; }
         public string? Last_Name { get; set; }
         public string? Company_Name { get; set; }
