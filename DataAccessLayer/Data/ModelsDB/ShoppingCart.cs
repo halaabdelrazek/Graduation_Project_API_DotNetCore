@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.ModelsDB
 {
-    public class Order
+    public class ShoppingCart
     {
-        public Order()
+        public ShoppingCart()
         {
             Laptops = new HashSet<Laptop>();
             PCGamings = new HashSet<PCGaming>();
@@ -24,19 +24,8 @@ namespace DataAccessLayer.Data.ModelsDB
             Tablets = new HashSet<Tablet>();
         }
         public Guid Id { get; set; }
-        public decimal ShippingPrice { get; set; }
-        public decimal Tax { get; set; }
-        
-        public OrderStatus OrderStatus { get; set; }
-
-        public DateTime DeliverDate { get; set; }
-
-        public DateTime OrderDate { get; set; }
-
-        public Guid CarrierId { get; set; }
-
-        public Carrier Carrier { get; set; }
-
+        public Guid UserId { get; set; }
+        public virtual User User { get; set; }
         public virtual ICollection<Laptop> Laptops { get; set; }
         public virtual ICollection<PCGaming> PCGamings { get; set; }
         public virtual ICollection<Monitor> Monitors { get; set; }
@@ -51,10 +40,5 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public virtual ICollection<MobilePhone> MobilePhones { get; set; }
         public virtual ICollection<Tablet> Tablets { get; set; }
-
-
-        // Realtionship with contactdetails 1 to 1 
-        public virtual ContactDetail ContactDetail { get; set; }
-
     }
 }
