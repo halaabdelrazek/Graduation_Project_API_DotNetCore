@@ -8,7 +8,11 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.Data.ModelsDB
 {
     public class User: IdentityUser
-    { 
+    {
+        public User()
+        {
+            Reviews = new HashSet<Review>();
+        }
         public string? First_Name { get; set; }
         public string? Last_Name { get; set; }
         public string? Company_Name { get; set; }
@@ -17,6 +21,9 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? Description { get; set; }
         public Guid CartId { get; set; }
         public virtual ShoppingCart ShoppingCart { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
+
 
     }
 }
