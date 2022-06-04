@@ -9,6 +9,11 @@ namespace DataAccessLayer.Data.ModelsDB
 {
     public class User: IdentityUser
     {
+        User()
+        {
+            ContactDetails = new HashSet<ContactDetail>();
+        }
+    {
         public User()
         {
             Reviews = new HashSet<Review>();
@@ -21,6 +26,8 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? Description { get; set; }
         public Guid CartId { get; set; }
         public virtual ShoppingCart ShoppingCart { get; set; }
+
+        public virtual ICollection<ContactDetail> ContactDetails { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }
 
