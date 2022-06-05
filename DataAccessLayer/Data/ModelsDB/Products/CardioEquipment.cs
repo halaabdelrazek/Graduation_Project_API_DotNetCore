@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace DataAccessLayer.Data.ModelsDB
             WishlistProduct = new HashSet<WishlistProduct>();
             ProductOrders = new HashSet<ProductOrder>();
             Reviews = new HashSet<Review>();
+            ProductCarts = new HashSet<ProductCart>();
         }
         public Guid Id { get; set; }
 
@@ -50,7 +52,10 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? Material { get; set; }
 
         public string? Dimensions { get; set; }
+        public virtual ICollection<ProductCart> ProductCarts { get; set; }
 
+        public String UserId { get; set; }
+        public virtual User User { get; set; }
 
 
 

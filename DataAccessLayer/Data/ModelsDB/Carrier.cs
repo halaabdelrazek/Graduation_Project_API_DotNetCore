@@ -19,5 +19,7 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? Carrier_Phone { get; set; }
 
         public ICollection<Order> Orders { get; set; }
+
+
     }
 }

@@ -20,6 +20,7 @@ namespace DataAccessLayer.Data.ModelsDB
             WishlistProduct = new HashSet<WishlistProduct>();
             ProductOrders = new HashSet<ProductOrder>();
             Reviews = new HashSet<Review>();
+            ProductCarts = new HashSet<ProductCart>();
         }
         public Guid Id { get; set; }
 
@@ -55,8 +56,11 @@ namespace DataAccessLayer.Data.ModelsDB
         public string Volume { get; set; }
         public string Scent { get; set; }
         public Type Type { get; set; }
+        public virtual ICollection<ProductCart> ProductCarts { get; set; }
 
-      
+        public String UserId { get; set; }
+        public virtual User User { get; set; }
+
 
 
     }

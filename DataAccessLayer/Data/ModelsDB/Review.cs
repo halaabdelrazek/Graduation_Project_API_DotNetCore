@@ -18,7 +18,7 @@ namespace DataAccessLayer.Data.ModelsDB
         [Range(1, 5)]
         public int Rating { get; set; }
 
-        public Guid UserId { get; set; }
+        public String UserId { get; set; }
 
         public virtual User User { get; set; }
 

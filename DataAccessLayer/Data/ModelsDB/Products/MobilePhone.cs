@@ -15,6 +15,7 @@ namespace DataAccessLayer.Data.ModelsDB
             WishlistProduct = new HashSet<WishlistProduct>();
             ProductOrders = new HashSet<ProductOrder>();
             Reviews = new HashSet<Review>();
+            ProductCarts = new HashSet<ProductCart>();
         }
         public Guid Id { get; set; }
 
@@ -43,6 +44,8 @@ namespace DataAccessLayer.Data.ModelsDB
 
         public ICollection<ProductImage> ProductImages { get; set; }
         public virtual ICollection<ProductOrder> ProductOrders { get; set; }
+        public virtual ICollection<ProductCart> ProductCarts { get; set; }
+
         public Guid SubCategoryId { get; set; }
         public virtual SubCategory SubCategory { get; set; }
 
@@ -55,8 +58,9 @@ namespace DataAccessLayer.Data.ModelsDB
         public string? CellularTechnology { get; set; }
         public int ModelYear { get; set; }
         public string? SIMCardSlotCount { get; set; }
-        
 
+        public String UserId { get; set; }
+        public virtual User User { get; set; }
 
     }
 }

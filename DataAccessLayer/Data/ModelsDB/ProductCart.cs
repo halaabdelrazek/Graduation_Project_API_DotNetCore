@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.ModelsDB
 {
-    public class WishlistProduct
+    public class ProductCart
     {
         public Guid Id { get; set; }
-        public Guid WishlistId { get; set; }
-        public Wishlist Wishlist { get; set; }
+        public Guid ShoppingCartId { get; set; }
+
+        public ShoppingCart ShoppingCart { get; set; }
 
         public Guid AccessoriesId { get; set; }
 
@@ -60,6 +61,5 @@ namespace DataAccessLayer.Data.ModelsDB
         public Guid TabletId { get; set; }
 
         public virtual Tablet Tablet { get; set; }
-
     }
 }

@@ -16,10 +16,10 @@ namespace DataAccessLayer.Data.ModelsDB
         public string Street1 { get; set; }
         public string? Street2 { get; set; }
 
-        public virtual Guid OrderId { get; set; }
+        public  Guid OrderId { get; set; }
         public virtual Order Order { get; set; }
 
-        public virtual Guid UserId { get; set; }
+        public  string UserId { get; set; }
         public virtual User User { get; set; }
 
 

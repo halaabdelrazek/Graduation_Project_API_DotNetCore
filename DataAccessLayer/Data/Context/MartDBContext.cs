@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using Monitor = DataAccessLayer.Data.ModelsDB.Monitor;
@@ -21,10 +22,18 @@ namespace DataAccessLayer.Data.Context
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<ProductOrder>().HasKey(a => new { a.OrderId, a.ProductId });
-            builder.Entity<WishlistProduct>().HasKey(a => new { a.WishlistId, a.ProductId });
+      
             builder.Entity<User>().ToTable("Users");
             builder.Entity<IdentityUserClaim<string>>().ToTable("UsersClaims");
+            //builder.Entity<User>()
+            //.HasOne(b => b.ShoppingCart)
+            //.WithOne(i => i.User)
+            //.HasForeignKey<ShoppingCart>(b => b.UserId);
+
+            //builder.Entity<User>()
+            //  .HasOne(b => b.Wishlist)
+            //  .WithOne(i => i.User)
+            //  .HasForeignKey<Wishlist>(b => b.UserId);
         }
         public DbSet<Carrier> Carriers { get; set; }
         public DbSet<Category> Categories { get; set; }
